@@ -55,12 +55,28 @@ header .active:hover {
     color: #921A40;
 }
 
+header .logo {
+    transition: 0.5s;
+    margin: 5px;
+    width: 5%;
+    border-radius: 5px;
+}
+
+header .logo:hover {
+    transition: 0.5s;
+    width: 8%;
+}
+
 /*!! RODAPE !!*/
 
 footer {
+    padding: 10px;
     left: 0;
     bottom: 0;
     width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     position: fixed;
     text-align: center;
     color: #f1d6d0;
