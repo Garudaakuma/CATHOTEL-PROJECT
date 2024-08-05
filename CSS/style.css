@@ -1,0 +1,68 @@
+/*
+
+!! Pallet color !!
+
+#921A40
+#C75B7A
+#D9ABAB
+#F4D9D0
+
+*/
+
+body {
+    background-color: #921A40;
+}
+
+/*!! CABEÇARIO !!*/ 
+
+header {
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #c75b7a;
+}
+
+header a {
+    transition: 0.5s;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #d9abab;
+    color: #921A40;
+}
+
+header a:hover {
+    transition: 0.5s;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #921A40;
+    color: #f1d6d0;
+}
+
+header .active {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #921A40;
+    color: #f1d6d0;
+}
+
+header .active:hover {
+    padding: 12px;
+    font-size: 22px;
+    background-color: #d9abab;
+    color: #921A40;
+}
+
+/*!! RODAPE !!*/
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    color: #f1d6d0;
+    background-color: black;
+}
