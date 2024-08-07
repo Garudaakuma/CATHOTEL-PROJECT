@@ -70,14 +70,13 @@ header .logo:hover {
 /*!! RODAPE !!*/
 
 footer {
-    padding: 10px;
     left: 0;
-    bottom: 0;
+    bottom: 100;
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
-    position: fixed;
+    position:absolute;
     text-align: center;
     color: #f1d6d0;
     background-color: black;
