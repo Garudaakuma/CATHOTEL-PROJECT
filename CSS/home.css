@@ -22,12 +22,19 @@
 }
 
 .img-fachada img {
+    transition: 0.5s;
     border-radius: 5px;
     width: 50%;
     outline: 5px solid #921A40;
 }
 
+.img-fachada img:hover {
+    transition: 0.5s;
+    width: 55%;
+}
+
 .img-fachada .text {
+    margin: 15px;
     width: 50%;
     border-radius: 10px;
     display: flex;
@@ -38,5 +45,16 @@
 }
 
 .img-fachada .text p {
-    width: 50%;
+    transition: 0.5s;
+    padding: 8px;
+    color: #f4d9d0;
+}
+
+.img-fachada .text p:hover {
+    transition: 0.5s;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #921A40;
+    background-color: #d9abab;
 }
