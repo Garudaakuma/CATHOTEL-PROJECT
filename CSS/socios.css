@@ -1,0 +1,88 @@
+/*
+
+!! Pallet color !!
+
+#921A40
+#C75B7A
+#D9ABAB
+#F4D9D0
+
+*/
+
+.SOCIOS {
+    margin: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #c75b7a;
+}
+
+.image-text {
+    width: 75%;
+    margin: 5px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-text .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-text .image img{
+    transition: 0.5s;
+    padding: 5px;
+    width: 50%;
+    border-radius: 15px;
+    background-color: #921A40;
+}
+
+.image-text .image img:hover{
+    transition: 0.5s;
+    width: 75%;
+}
+
+.image-text .text {
+    width: 50%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #921a40;
+    color: #f4d9d0;
+}
+
+.image-text .text h1 {
+    transition: 0.5s;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align:start;
+    color: #921A40;
+    background-color: #d9abab;
+}
+
+.image-text .text p {
+    transition: 0.5s;
+    margin: auto;
+    text-align:justify;
+    color: #f4d9d0;
+}
+
+.image-text .text p:hover {
+    transition: 0.5s;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #921A40;
+    background-color: #d9abab;
+}

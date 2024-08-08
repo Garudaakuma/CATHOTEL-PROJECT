@@ -71,7 +71,6 @@ header .logo:hover {
 
 footer {
     left: 0;
-    bottom: 100;
     width: 100%;
     display: flex;
     align-content: center;
