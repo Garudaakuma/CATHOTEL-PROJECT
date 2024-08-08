@@ -1,0 +1,68 @@
+.body_sobre {
+    background-color: #921A40;
+    margin: 0%;
+}
+
+.titulo{
+    color: white;
+    background-color: #C75B7A;
+    padding: 25px;
+    margin: 0%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.sobre{
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.sobre h3{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.suites{
+    margin-top: 20px;
+    background-color: #C75B7A;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.atendimento{
+    background-color: #C75B7A;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+}
+
+.brincadeiras{
+    background-color: #C75B7A;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+}
+
+.alimentacao{
+    background-color: #C75B7A;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+}
+
+.monitoramento{
+    background-color: #C75B7A;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+}
+
