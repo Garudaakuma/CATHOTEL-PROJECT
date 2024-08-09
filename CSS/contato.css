@@ -1,0 +1,37 @@
+/*
+
+!! Pallet color !!
+
+#921A40
+#C75B7A
+#D9ABAB
+#F4D9D0
+
+*/
+.div_contatos{
+    display: flex;
+    align-items: center;
+}
+
+.CONTATO h1{
+    text-align: center;
+    padding: 15px;
+    background-color: #C75B7A;
+    color: #F4D9D0;
+}
+
+.formas_de_contato{
+    background-color: #C75B7A;
+    padding: 50px;
+    color: #F4D9D0;
+}
+
+.formas_de_contato p{
+    padding: 25px;
+}
+
+.enviar_mensagem{
+    display: flex;
+    align-items: center;
+}
+
