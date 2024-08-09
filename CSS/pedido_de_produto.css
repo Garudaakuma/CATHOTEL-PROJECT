@@ -36,21 +36,19 @@
 }
 
 .forms_content {
+    border-radius: 8px;
     display: flex;
+    background-color: #921a40;
+    color: #f4d9d0;
 }
 
 .forms {
     padding: 30px;
-    border-radius: 8px;
-    background-color: #921a40;
-    color: #f4d9d0;
 }
 
 .forms form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
 }
 
 .forms form p {
@@ -73,4 +71,17 @@
     border-color: #c75b7a;
     background-color: #d9abab;
     color: #921a40;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.images img {
+    width: 30%;
+    margin: 25px;
+    border-radius: 8px;
 }

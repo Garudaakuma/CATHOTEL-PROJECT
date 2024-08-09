@@ -8,21 +8,31 @@
 #F4D9D0
 
 */
-.div_contatos{
+
+.CONTATO {
+    margin: 30px;
+    border-radius: 8px;
+    padding: 25px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    align-content: center;
+    background-color: #C75B7A;
+    color: #F4D9D0;
 }
 
 .CONTATO h1{
     text-align: center;
     padding: 15px;
-    background-color: #C75B7A;
+    border-radius: 8px;
+    background-color: #921a40;
     color: #F4D9D0;
 }
 
 .formas_de_contato{
-    background-color: #C75B7A;
+    background-color: #921a40;
     padding: 50px;
+    border-radius: 8px;
     color: #F4D9D0;
 }
 
@@ -30,8 +40,32 @@
     padding: 25px;
 }
 
+.div_contatos{
+    display: flex;
+}
+
+.div_contatos p{
+    padding: 15px;
+    margin: auto;
+}
+
 .enviar_mensagem{
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+.enviar_mensagem textarea{
+    resize: none;
+    margin: 10px;
+}
+
+.enviar_mensagem input {
+    margin: 10px;
+}
+
+.enviar_mensagem button {
+    border-color: #c75b7a;
+    background-color: #d9abab;
+    color: #921a40;
+}
