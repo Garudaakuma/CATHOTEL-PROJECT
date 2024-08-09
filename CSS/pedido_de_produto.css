@@ -1,0 +1,76 @@
+/*
+
+!! Pallet color !!
+
+#921A40
+#C75B7A
+#D9ABAB
+#F4D9D0
+
+*/
+
+.PEDIDO_DE_PRODUTO {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 28px;
+    border-radius: 8px;
+    background-color: #c75b7a;
+}
+
+.PEDIDO_DE_PRODUTO h1 {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #921a40;
+    color: #f4d9d0;
+}
+
+.PEDIDO_DE_PRODUTO p {
+    padding: 8px;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: #921a40;
+    color: #f4d9d0;
+}
+
+.forms_content {
+    display: flex;
+}
+
+.forms {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #921a40;
+    color: #f4d9d0;
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.forms form p {
+    padding: 8px;
+    margin: auto;
+    background-color: #d9abab;
+    color: #921a40;
+}
+
+.forms form hr{
+    width: 100%;
+    height: 4px;
+    border-width: 0px;
+    border-radius: 8px;
+    color: #c75b7a;
+    background-color: #d9abab;
+}
+
+.forms form button {
+    border-color: #c75b7a;
+    background-color: #d9abab;
+    color: #921a40;
+}
