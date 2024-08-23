@@ -5,12 +5,14 @@
         <link rel="icon" href="../IMAGES/favicon.ico">
         <link rel="stylesheet" href="../CSS/style.css">
         <link rel="stylesheet" href="../CSS/pedido_de_produto.css">
+        <script src="../JS/pedido_prod.js"></script>
         <title>/(=🝦 ༝ 🝦=) / [HOME]</title>
     </head>
-    <body>
+
+    <body onload="pageOnLoad()">
         <header>
             <img src="../IMAGES/Logo.png" class="logo">
-            <a href="../HOME.html">HOME</a>
+            <a href="../index.html">HOME</a>
             <a href="">QUARTOS</a>
             <a href="../HTML/sobre.html">SOBRE</a>
             <a href="../HTML/SOCIOS.html">SOCIOS</a>
@@ -22,112 +24,139 @@
             <p>Antes de começar sua reserva, precisamos das seguintes informações..</p>
             <div class="forms_content">
                 <div class="forms">
-                    <form>
+                    <form name="form" id="form" method="post">
                         <hr>
                         <p>Gato?</p> <br>
                         <div>
-                            Sim<input type="radio" name="CatCheck" value="1"> <br>
-                            Não<input type="radio" name="CatCheck" value="2"> <br>
+                            Sim<input type="radio" id="CatCheck" name="CatCheck" value="1"> <br>
+                            Não<input type="radio" id="CatCheck" name="CatCheck" value="2"> <br>
                         </div>
                         <hr>
-                        <br> <p>Nome do gato?</p> <br>
-                        <input type="textbox" name="Catname"> <br>
-                        <hr>
-                        <br> <p>Raça do gato</p> <br>
-                        <div>
-                            Persa<input type="radio" name="Catrace" value="1"> <br>
-                            Siames<input type="radio" name="Catrace" value="2"> <br>
-                            Maine coon<input type="radio" name="Catrace" value="3"> <br>
-                            Angorá<input type="radio" name="Catrace" value="4"> <br>
-                            Bengal<input type="radio" name="Catrace" value="5"> <br>
-                            outro: <input type="text" name="Catrace"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Cor do gato?</p> <br>
-                        <input type="color" name="Catcolor"><br>
-                        <hr>
-                        <br> <p>Com pelo?</p> <br>
-                        <div>
-                            Sim<input type="radio" name="CatCheckFurr" value="1"> <br>
-                            Não<input type="radio" name="CatCheckFurr" value="2"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Possui quantas patas?</p> <br>
-                        <input type="number" name="CatPaw" min="0" max="4"> <br>
-                        <hr>
-                        <br> <p>Possui cauda o gato?</p> <br>
-                        <div>
-                            Sim<input type="radio" name="CatCheckTail" value="1"> <br>
-                            Não<input type="radio" name="CatCheckTail" value="2"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Data de nascimento do gato</p> <br>
-                        <input type="date" name="CatBirth"> <br>
-                        <hr>
-                        <br> <p>Nacionalidade</p> <br>
-                        <input type="textbox" name="CatNacionality"> <br>
-                        <hr>
-                        <br> <p>Deficiencia</p> <br>
-                        <div>
-                            Não <input type="radio" name="CatAutism" value="1"> <br>
-                            Sim <input type="radio" name="CatAutism" value="2"> <input type="text" name="CatAutism"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Vacinação em dia?</p> <br>
-                        <div>
-                            Sim<input type="radio" name="CatMeds" value="1"> <br>
-                            Não<input type="radio" name="CatMeds" value="2"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Possui alergia?</p> <br>
-                        <div>
-                            Não <input type="radio" name="CatAllergy" value="1"> <br>
-                            Sim <input type="radio" name="CatAllergy" value="2"> <input type="text" name="CatAllergy"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Toma remedios?</p> <br>
-                        <div>
-                            Não <input type="radio" name="CatPills" value="1"> <br>
-                            Sim <input type="radio" name="CatPills" value="2"> Qual? <input type="text" name="CatPills"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Alimentação</p> <br>
-                        <div>
-                            Vegano <input type="radio" name="Catfood" value="1"> <br>
-                            Ornivero <input type="radio" name="Catfood" value="2"> <br>
-                            Carnivero <input type="radio" name="Catfood" value="3"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Pode se inturma com outros gatos?</p> <br>
-                        <div>
-                            Sim<input type="radio" name="CatFriendly" value="1"> <br>
-                            Não<input type="radio" name="CatFriendly" value="2"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Qual andar?</p> <br>
-                        <input type="number" name="CatFloor" min="1" max="60"> <br>
-                        <hr>
-                        <br> <p>Padrão de Quarto</p> <br>
-                        <div>
-                            Luxo <input type="radio" name="CatTypeRoom" value="1"> <br>
-                            Alto Padrão <input type="radio" name="CatTypeRoom" value="2"> <br>
-                            Medio Padrão <input type="radio" name="CatTypeRoom" value="3"> <br>
-                            Baixo Padrão <input type="radio" name="CatTypeRoom" value="3"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Banho incluso</p> <br>
-                        <div>
-                            Sim<input type="radio" name="CatBath" value="1"> <br>
-                            Não<input type="radio" name="CatBath" value="2"> <br>
-                        </div>
-                        <hr>
-                        <br> <p>Data de checkIn</p> <br>
-                        <input type="date" name="CatCheckIn"> <br>
-                        <hr>
-                        <br> <p>Data de checkOut</p> <br>
-                        <input type="date" name="CatCheckOut"> <br>
                         <br>
-                        <button type="submit" value="Enviar">Enviar</button>
+                        <p>Nome do gato?</p> <br>
+                        <input type="textbox" id="Cat" name="Catname"> <br>
+                        <hr>
+                        <br>
+                        <p>Raça do gato</p> <br>
+                        <div>
+                            Persa<input type="radio" id="Catrace" name="Catrace" value="1"> <br>
+                            Siames<input type="radio" id="Catrace" name="Catrace" value="2"> <br>
+                            Maine coon<input type="radio" id="Catrace" name="Catrace" value="3"> <br>
+                            Angorá<input type="radio" id="Catrace" name="Catrace" value="4"> <br>
+                            Bengal<input type="radio" id="Catrace" name="Catrace" value="5"> <br>
+                            outro: <input type="radio" id="Catrace" name="Catrace" value="6"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Cor do gato?</p> <br>
+                        <input type="color" id="Catcolor" name="Catcolor"><br>
+                        <hr>
+                        <br>
+                        <p>Com pelo?</p> <br>
+                        <div>
+                            Sim<input type="radio" id="CatCheckFurr" name="CatCheckFurr" value="1"> <br>
+                            Não<input type="radio" id="CatCheckFurr" name="CatCheckFurr" value="2"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Possui quantas patas?</p> <br>
+                        <input type="number" id="CatPaw" name="CatPaw" min="0" max="4"> <br>
+                        <hr>
+                        <br>
+                        <p>Possui cauda o gato?</p> <br>
+                        <div>
+                            Sim<input type="radio" id="CatCheckTail" name="CatCheckTail" value="1"> <br>
+                            Não<input type="radio" id="CatCheckTail" name="CatCheckTail" value="2"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Data de nascimento do gato</p> <br>
+                        <input type="date" id="CatBirth" name="CatBirth"> <br>
+                        <hr>
+                        <br>
+                        <p>Nacionalidade</p> <br>
+                        <input type="text" id="CatNacionality" name="CatNacionality"> <br>
+                        <hr>
+                        <br>
+                        <p>Deficiencia</p> <br>
+                        <div>
+                            Não <input type="radio" id="CatAutism" name="CatAutism" value="1"> <br>
+                            Sim <input type="radio" id="CatAutism" name="CatAutism" value="2"> <input type="text"
+                                id="CatAutismText" name="CatAutism"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Vacinação em dia?</p> <br>
+                        <div>
+                            Sim<input type="radio" id="CatMeds" name="CatMeds" value="1"> <br>
+                            Não<input type="radio" id="CatMeds" name="CatMeds" value="2"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Possui alergia?</p> <br>
+                        <div>
+                            Não <input type="radio" id="CatAllergy" name="CatAllergy" value="1"> <br>
+                            Sim <input type="radio" id="CatAllergy" name="CatAllergy" value="2"> <input type="text"
+                                id="CatAllergyText" name="CatAllergy"> <br>
+
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Toma remedios?</p> <br>
+                        <div>
+                            Não <input type="radio" id="CatPills" name="CatPills" value="1"> <br>
+                            Sim <input type="radio" id="CatPills" name="CatPills" value="2"> Qual? <input type="text"
+                                id="CatPillsText" name="CatPills"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Alimentação</p> <br>
+                        <div>
+                            Vegano <input type="radio" id="Catfood" name="Catfood" value="1"> <br>
+                            Ornivero <input type="radio" id="Catfood" name="Catfood" value="2"> <br>
+                            Carnivero <input type="radio" id="Catfood" name="Catfood" value="3"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Pode se inturma com outros gatos?</p> <br>
+                        <div>
+                            Sim<input type="radio" id="CatFriendly" name="CatFriendly" value="1"> <br>
+                            Não<input type="radio" id="CatFriendly" name="CatFriendly" value="2"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Qual andar?</p> <br>
+                        <input type="number" id="CatFloor" name="CatFloor" min="1" max="60"> <br>
+                        <hr>
+                        <br>
+                        <p>Padrão de Quarto</p> <br>
+                        <div>
+                            Luxo <input type="radio" id="CatTypeRoom" name="CatTypeRoom" value="1"> <br>
+                            Alto Padrão <input type="radio" id="CatTypeRoom" name="CatTypeRoom" value="2"> <br>
+                            Medio Padrão <input type="radio" id="CatTypeRoom" name="CatTypeRoom" value="3"> <br>
+                            Baixo Padrão <input type="radio" id="CatTypeRoom" name="CatTypeRoom" value="4"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Banho incluso</p> <br>
+                        <div>
+                            Sim<input type="radio" id="CatBath" name="CatBath" value="1"> <br>
+                            Não<input type="radio" id="CatBath" name="CatBath" value="2"> <br>
+                        </div>
+                        <hr>
+                        <br>
+                        <p>Data de checkIn</p> <br>
+                        <input type="date" id="CatCheckIn" name="CatCheckIn"> <br>
+                        <hr>
+                        <br>
+                        <p>Data de checkOut</p> <br>
+                        <input type="date" id="CatCheckOut" name="CatCheckOut"> <br>
+                        <br>
+                        <div class="bt_SumitReset">
+                            <input type="submit" value="Enviar!" onclick="btnSendOnClick(event)">
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="reset" value="Limpar!">
+                        </div>
                         <hr>
                     </form>
                 </div>

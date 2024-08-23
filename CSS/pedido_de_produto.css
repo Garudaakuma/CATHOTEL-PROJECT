@@ -73,15 +73,23 @@
     color: #921a40;
 }
 
-.images {
+.bt_SumitReset {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
+} .bt_SumitReset input {
+    transition: 0.2s;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+    outline: 2px #d9abab solid;
+    background-color: #921a40;
+    color: #f4d9d0;
 }
 
-.images img {
-    width: 30%;
-    margin: 25px;
-    border-radius: 8px;
+.bt_SumitReset input:hover {
+    transition: 0.2s;
+    scale: 125%;
+    background-color: #d9abab;
+    color: #921a40;
 }
