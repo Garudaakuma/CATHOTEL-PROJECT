@@ -1,7 +1,4 @@
 
-
-alert("js carregado :D")
-
 function pageOnLoad() {
     CatCheckYes.focus()
 }
@@ -54,18 +51,16 @@ function btnSendOnClick(event) {
 
     event.preventDefault();
 
-    alert(`${Catcolor.value}`)
-
     if (!CatCheckYes.checked && !CatCheckNo.checked) {
         alert("Preenchimento obrigatório: Contem gato?")
         CatCheckYes.focus()
     } else if (CatCheckNo.checked && !CatCheckYes.checked) {
         alert("Necessita de um gato!")
         CatCheckYes.focus()
-    } else if (Catname == "") {
+    } else if (Catname.value == "") {
         alert("Preenchimento obrigatório: Nome do gato")
         Catname.focus()
-    } else if (CatEmail == "") {
+    } else if (CatEmail.value == "") {
         alert("Preenchimento obrigatório: Email do gato")
         CatEmail.focus()
     } else if (!Catrace1.checked && !Catrace2.checked && !Catrace3.checked && !Catrace4.checked && !Catrace5.checked && !Catrace6.checked) {
