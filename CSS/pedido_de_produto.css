@@ -48,6 +48,7 @@
 
 .forms form {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -64,6 +65,30 @@
     border-width: 0px;
     border-radius: 8px;
     color: #c75b7a;
+    background-color: #d9abab;
+}
+
+.forms input[type=textbox] {
+    border-radius: 5px;
+    color: #921a40;
+    background-color: #d9abab;
+}
+
+.forms input[type=number] {
+    border-radius: 5px;
+    color: #921a40;
+    background-color: #d9abab;
+}
+
+.forms input[type=date] {
+    border-radius: 5px;
+    color: #921a40;
+    background-color: #d9abab;
+}
+
+.forms input[type=text] {
+    border-radius: 5px;
+    color: #921a40;
     background-color: #d9abab;
 }
 
