@@ -75,6 +75,18 @@ function btnSendOnClick(event) {
     } else if (CatPaw.value == "0") {
         alert("Preenchimento obrigatório: Quantidade de patas")
         CatPaw.focus()
+    } else if (!CatCheckTail1.checked && !CatCheckTail2.checked) {
+        alert("Preenchimento obrigatorio: O gato possui cauda?")
+        CatCheckTail1.focus()
+    } else if (CatBirth.value == "") {
+        alert("Preenchimento obrigatorio: Data de nascimento do gato")
+        CatBirth.focus()
+    } else if (CatNacionality.value == "") {
+        alert("Preenchimento obrigatorio: Nacionalidade")
+        CatNacionality.focus()
+    } else if (!CatAutism1.checked && !CatAutism2.checked || CatAutismText.value == "") {
+        alert("...")
+        CatAutism1.focus()
     }
 }
 
@@ -83,8 +95,8 @@ GATO ✔
 RAÇA ✔
 COR ✔
 PELO ✔
-CAUDA
-DEFICIENCIA
+CAUDA ✔
+DEFICIENCIA ~✔
 VACINAÇÃO
 ALERGIA
 REMEDIO

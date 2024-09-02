@@ -24,7 +24,17 @@
     padding: 8px;
     border-radius: 8px;
     background-color: #921a40;
-    color: #f4d9d0;
+    color: #d9abab;
+    border: 2px solid transparent;
+    transition: 0.3s all ease-in-out;
+
+} .PEDIDO_DE_PRODUTO h1:hover {
+    padding: 10px;
+    font-size: 170%;
+    background-color: #f4d9d0;
+    color: #921a40;
+    border: 3px solid #921a40;
+    transition: 0.5s all ease-out;
 }
 
 .PEDIDO_DE_PRODUTO p {
@@ -32,7 +42,17 @@
     margin: 20px;
     border-radius: 8px;
     background-color: #921a40;
-    color: #f4d9d0;
+    color: #d9abab;
+    border: 2px solid transparent;
+    transition: 0.3s all ease-in-out;
+
+} .PEDIDO_DE_PRODUTO p:hover {
+    padding: 10px;
+    font-size: 125%;
+    background-color: #f4d9d0;
+    color: #921a40;
+    border: 3px solid #921a40;
+    transition: 0.5s all ease-out;
 }
 
 .forms_content {
@@ -44,6 +64,11 @@
 
 .forms {
     padding: 30px;
+    transition: 0.2s all cubic-bezier(0,-0.01, 0, 0.99);
+
+} .forms:hover {
+    padding: 40px;
+    transition: 0.2s all ease-out;
 }
 
 .forms form {
@@ -66,30 +91,96 @@
     border-radius: 8px;
     color: #c75b7a;
     background-color: #d9abab;
+    border: #d9abab 2px solid;
+}
+
+.forms input[type=radio] {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 2px solid #921a40;
+    background-color: #d9abab;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=radio]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
+
+} .forms input[type=radio]:checked {
+    border-color: #c75b7a;
+    background-color: #921a40;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=radio]:checked:hover {
+    border-color: #f4d9d0;
+    transition: 0.2s all ease-out;
 }
 
 .forms input[type=textbox] {
     border-radius: 5px;
     color: #921a40;
     background-color: #d9abab;
+    border-color: #921a40;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=textbox]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
 }
 
 .forms input[type=number] {
     border-radius: 5px;
     color: #921a40;
     background-color: #d9abab;
+    border-color: #921a40;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=number]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
 }
 
 .forms input[type=date] {
     border-radius: 5px;
     color: #921a40;
     background-color: #d9abab;
+    border-color: #921a40;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=date]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
 }
 
 .forms input[type=text] {
     border-radius: 5px;
     color: #921a40;
     background-color: #d9abab;
+    border-color: #921a40;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=text]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
+}
+
+.forms input[type=color] {
+    border-radius: 5px;
+    border-color: #921a40;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-in-out;
+
+} .forms input[type=color]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
 }
 
 .forms form button {
@@ -102,6 +193,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
 } .bt_SumitReset input {
     transition: 0.2s;
     font-size: 20px;
@@ -110,9 +202,8 @@
     outline: 2px #d9abab solid;
     background-color: #921a40;
     color: #f4d9d0;
-}
 
-.bt_SumitReset input:hover {
+} .bt_SumitReset input:hover {
     transition: 0.2s;
     scale: 125%;
     background-color: #d9abab;
