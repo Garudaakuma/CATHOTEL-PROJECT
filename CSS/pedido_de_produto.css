@@ -183,6 +183,10 @@
     transition: 0.2s all ease-out;
 }
 
+.forms .yesThen {
+    visibility: hidden;
+}
+
 .forms form button {
     border-color: #c75b7a;
     background-color: #d9abab;
