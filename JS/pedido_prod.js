@@ -226,7 +226,7 @@ function btnSendOnClick(event) {
     } else if (!CatMeds1.checked && !CatMeds2.checked) {
         alert("Preenchimento obrigatorio: Vacinação em dia")
         CatMeds1.focus()
-    } else if (!CatMeds2.checked) {
+    } else if (CatMeds2.checke2) {
         alert("A vacinação do gato precisa estar em dia!!")
         CatMeds1.focus()
     } else if (!CatAllergy1.checked && !CatAllergy2.checked) { //Todo: Regex
@@ -250,10 +250,10 @@ function btnSendOnClick(event) {
     } else if (!CatBath1.checked && !CatBath2.checked) {
         alert("Preenchimento obrigatorio: Banho incluso")
         CatBath1.focus()
-    } else if (!CatCheckIn.value == "") {
+    } else if (CatCheckIn.value == "") {
         alert("Preenchimento obrigatorio: CheckIn do gato")
         CatCheckIn.focus()
-    } else if (!CatCheckOut.value == "") {
+    } else if (CatCheckOut.value == "") {
         alert("Preenchimento obrigatorio: CheckOut do gato")
         CatCheckOut.focus()
     }
