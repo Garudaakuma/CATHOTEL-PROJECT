@@ -42,34 +42,6 @@ const CatBath2 = document.getElementById('CatBath2');
 const CatCheckIn = document.getElementById('CatCheckIn');
 const CatCheckOut = document.getElementById('CatCheckOut');
 
-// ? Birth date ? //
-CatBirth.addEventListener("change", () => {
-    const timeElapsed = Date.now()
-    const today = new Date(timeElapsed).toISOString()
-    let Today_dmy = [today[8]+today[9], //? Day string
-    today[5]+today[6], //? Month String
-    today[0]+today[1]+today[2]+today[3]] //? Year String
-    let CheckBirth = [CatBirth.value[8]+CatBirth.value[9], //? Day string
-    CatBirth.value[5]+CatBirth.value[6], //? Month String
-    CatBirth.value[0]+CatBirth.value[1]+CatBirth.value[2]+CatBirth.value[3]] //? Year String
-
-    if (CatBirth.value.length > 10) {
-        alert("Valor invalido!")
-        CatCheckIn.value = ""
-    }
-    if (CheckBirth != "") {
-        if (Today_dmy[2]-CheckBirth[2] > 18) {
-            alert("uh... o gato é imortal?")
-            CatBirth.value = ""
-            CatBirth.focus()
-        } else if (Today_dmy[1]-CheckBirth[1] < 12) {
-            alert("O gato é menor de idade")
-            CatBirth.value = ""
-            CatBirth.focus()
-        }
-    }
-})
-
 // ? yes then ... ? //
 CatAutism1.addEventListener("change", () => {
     if (CatAutism1.checked) {
@@ -118,66 +90,6 @@ CatFloor.addEventListener("change", () => {
     }
 })
 
-//? Date start
-CatCheckIn.addEventListener("change", () => {
-    let CheckIn_dmy = [CatCheckIn.value[8]+CatCheckIn.value[9], //? Day string
-    CatCheckIn.value[5]+CatCheckIn.value[6], //? Month String
-    CatCheckIn.value[0]+CatCheckIn.value[1]+CatCheckIn.value[2]+CatCheckIn.value[3]] //? Year String
-
-    let CheckOut_dmy = [CatCheckOut.value[8]+CatCheckOut.value[9], //? Day string
-    CatCheckOut.value[5]+CatCheckOut.value[6], //? Month string
-    CatCheckOut.value[0]+CatCheckOut.value[1]+CatCheckOut.value[2]+CatCheckOut.value[3]] //? Year string
-
-    if (CatCheckIn.value.length > 10) {
-        alert("Valor invalido!")
-        CatCheckIn.value = ""
-    }
-    if (CatCheckIn.value != "" && CatCheckOut.value != "") {
-        if (CheckIn_dmy[2] > CheckOut_dmy[2]) {
-            alert("Invalid year checkIn!")
-            CatCheckIn.value = ""
-            CatCheckIn.focus()
-        } else if (CheckIn_dmy[1] > CheckOut_dmy[1] && CheckIn_dmy[2] >= CheckOut_dmy[2]) {
-            alert("Invalid month checkIn!")
-            CatCheckIn.value = ""
-            CatCheckIn.focus()
-        } else if (CheckIn_dmy[0] > CheckOut_dmy[0] && CheckIn_dmy[1] >= CheckOut_dmy[1] && CheckIn_dmy[2] >= CheckOut_dmy[2]) {
-            alert("Invalid day checkIn!")
-            CatCheckIn.value = ""
-            CatCheckIn.focus()
-        }
-    }
-})
-//? Date end
-CatCheckOut.addEventListener("change", () => {
-    let CheckIn_dmy = [CatCheckIn.value[8]+CatCheckIn.value[9], //? Day string
-    CatCheckIn.value[5]+CatCheckIn.value[6], //? Month String
-    CatCheckIn.value[0]+CatCheckIn.value[1]+CatCheckIn.value[2]+CatCheckIn.value[3]] //? Year String
-
-    let CheckOut_dmy = [CatCheckOut.value[8]+CatCheckOut.value[9], //? Day string
-    CatCheckOut.value[5]+CatCheckOut.value[6], //? Month string
-    CatCheckOut.value[0]+CatCheckOut.value[1]+CatCheckOut.value[2]+CatCheckOut.value[3]] //? Year string
-
-    if (CatCheckOut.value.length > 10) {
-        alert("Valor invalido!")
-        CatCheckOut.value = ""
-    }
-    if (CatCheckIn.value != "" && CatCheckOut.value != "") {
-        if (CheckIn_dmy[2] > CheckOut_dmy[2]) {
-            alert("Invalid year checkOut!")
-            CatCheckOut.value = ""
-            CatCheckOut.focus()
-        } else if (CheckIn_dmy[1] > CheckOut_dmy[1] && CheckIn_dmy[2] >= CheckOut_dmy[2]) {
-            alert("Invalid month checkOut!")
-            CatCheckOut.value = ""
-            CatCheckOut.focus()
-        } else if (CheckIn_dmy[0] > CheckOut_dmy[0] && CheckIn_dmy[1] >= CheckOut_dmy[1] && CheckIn_dmy[2] >= CheckOut_dmy[2]) {
-            alert("Invalid day checkOut!")
-            CatCheckOut.value = ""
-            CatCheckOut.focus()
-        }
-    }
-})
 
 function pageOnLoad() {
     CatCheckYes.focus()
@@ -195,8 +107,14 @@ function btnSendOnClick(event) {
     } else if (Catname.value == "") { //Todo: Regex
         alert("Preenchimento obrigatório: Nome do gato")
         Catname.focus()
+    } else if (!nameCheck(Catname.value)) {
+        alert("Nome invalido!")
+        Catname.focus()
     } else if (CatEmail.value == "") { //Todo: Regex
         alert("Preenchimento obrigatório: Email do gato")
+        CatEmail.focus()
+    } else if(!emailCheck(CatEmail.value)) {
+        alert("Email invalido!")
         CatEmail.focus()
     } else if (!Catrace1.checked && !Catrace2.checked && !Catrace3.checked && !Catrace4.checked && !Catrace5.checked && !Catrace6.checked) {
         alert("Preenchimento obrigatório: Raça do gato")
@@ -219,7 +137,7 @@ function btnSendOnClick(event) {
     } else if (CatNacionality.value == "") {  //Todo: Regex
         alert("Preenchimento obrigatorio: Nacionalidade")
         CatNacionality.focus()
-    } else if (!CatAutism1.checked && !CatAutism2.checked || CatAutismText.value == "") { //Todo: Regex
+    } else if (!CatAutism1.checked && !CatAutism2.checked) { //Todo: Regex
         alert("Preenchimento obrigatorio: Deficiencia")
         CatAutism1.focus()
         CatAutismText.set
@@ -232,7 +150,7 @@ function btnSendOnClick(event) {
     } else if (!CatAllergy1.checked && !CatAllergy2.checked) { //Todo: Regex
         alert("Preenchimento obrigatorio: Possui alergia")
         CatAllergy1.focus()
-    } else if (!CatPills1.checked && !CatPills2.checked || CatPillsText.value == "") { //Todo: Regex
+    } else if (!CatPills1.checked && !CatPills2.checked) { //Todo: Regex
         alert("Preenchimento obrigatorio: Toma remedios")
         CatPills1.focus()
     } else if (!Catfood1.checked && !Catfood2.checked && !Catfood3.checked) {
@@ -259,8 +177,29 @@ function btnSendOnClick(event) {
     }
 }
 
-function nameCheck(name) {
-    const re = /^([A-Z])\w$/g
+function nameCheck(nome) {
+    const re = /^[^\d][\w\u00C0-\u00FF\s\-]+$/
+    return re.test(nome)
+}
+function emailCheck(email) {
+    const re = /^[\w._%+-]+@[\w.-]+\.[^\d][\w]{2,}$/
+    return re.test(email)
+}
+function nacionalidadeCheck(nacionalidade) {
+    const re = /^[^\d][\w\u00C0-\u00FF\s\-]+$/
+    return re.test(nacionalidade)
+}
+function deficienciaCheck(deficiencia) {
+    const re = /^[^\d][\w\u00C0-\u00FF\s\-]+$/
+    return re.test(deficiencia)
+}
+function alergiaCheck(alergia) {
+    const re = /^[^\d][\w\u00C0-\u00FF\s\-]+$/
+    return re.test(alergia)
+}
+function medicamentoCheck(medicamento) {
+    const re = /^[^\d][\w\u00C0-\u00FF\s\-]+$/
+    return re.test(medicamento)
 }
 
 /* //TODO: ✔
