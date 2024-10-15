@@ -55,17 +55,46 @@
     align-items: center;
 }
 
+.enviar_mensagem input[type=text] {
+    margin: 10px;
+    border-radius: 5px;
+    color: #921a40;
+    background-color: #d9abab;
+    border-color: #921a40;
+    transition: 0.2s all ease-in-out;
+
+} .enviar_mensagem input[type=text]:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
+}
+
 .enviar_mensagem textarea{
     resize: none;
     margin: 10px;
-}
+    border-radius: 5px;
+    color: #921a40;
+    background-color: #d9abab;
+    border-color: #921a40;
+    transition: 0.2s all ease-in-out;
 
-.enviar_mensagem input {
-    margin: 10px;
+} .enviar_mensagem textarea:hover {
+    border-color: #d9abab;
+    background-color: #f4d9d0;
+    transition: 0.2s all ease-out;
 }
 
 .enviar_mensagem button {
-    border-color: #c75b7a;
+    transition: 0.2s;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+    outline: 2px #d9abab solid;
+    background-color: #921a40;
+    color: #f4d9d0;
+} .enviar_mensagem button:hover {
+    transition: 0.2s;
+    scale: 125%;
     background-color: #d9abab;
     color: #921a40;
 }
