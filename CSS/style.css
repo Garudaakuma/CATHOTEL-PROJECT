@@ -15,7 +15,7 @@ body {
     background-color: #921A40;
 }
 
-/*!! CABEÇARIO !!*/ 
+/*!! CABEÇARIO !!*/
 
 header {
     padding: 20px;
@@ -24,6 +24,8 @@ header {
     align-items: center;
     background-color: #c75b7a;
 }
+
+footer p { color: #ffffff; }
 
 header a {
     transition: 0.5s;
