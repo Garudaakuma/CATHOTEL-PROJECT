@@ -73,7 +73,7 @@
     <section class="error_connection">
         <h1>✖ Falha na conexão! ✖</h1>
         <div class="forms">
-        <form name="form" id="form" method="post" action="connection.php">
+        <form name="form" id="form" method="post" action="action_reserva.php">
         <div class="inputs">
             <div class="server_input">
                 <p>Server name</p><input type="text" name="servername" id="servername">

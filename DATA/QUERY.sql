@@ -7,6 +7,7 @@ CREATE TABLE reserva(
     gato_email VARCHAR(50) NOT NULL,
     gato_raca VARCHAR(50) NOT NULL,
     gato_cor CHAR(7) NOT NULL,
+    gato_pelo BOOLEAN NOT NULL,
     gato_pata BOOLEAN NOT NULL,
     gato_cauda BOOLEAN NOT NULL,
     data_nascimento DATE NOT NULL,
