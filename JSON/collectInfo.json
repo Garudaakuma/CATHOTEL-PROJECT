@@ -1,0 +1,11 @@
+{
+    "db_bases": [
+        {
+            "servername": "localhost",
+            "username": "root",
+            "password": "*****",
+            "database": "cathotel",
+            "port": "3306"
+        }
+    ]
+}

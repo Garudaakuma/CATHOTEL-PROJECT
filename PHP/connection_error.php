@@ -85,7 +85,7 @@
                 <p>Password</p>
                 <div class="pw_inputs">
                     <input type="password" name="password" id="password">
-                    <input type="checkbox" onclick="togglePassword()">
+                    <input type="checkbox" onclick="togglePassword()" onkeypress="togglePassword()">
                 </div>
             </div>
             <div class="server_input">
