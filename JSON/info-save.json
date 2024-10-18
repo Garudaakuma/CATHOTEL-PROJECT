@@ -28,7 +28,7 @@
   "mySql": {
     "servername": "localhost",
     "username": "root",
-    "password": "Rock#blues031023",
+    "password": "****",
     "database": "cathotel",
     "port": "3306"
   }
