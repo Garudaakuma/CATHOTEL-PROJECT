@@ -13,11 +13,11 @@ if ($server_info['password'] === "****") {
     header("Location: connection_error.php");
 }
 
-$conn = new mysqli($server_info['servername'],
-                   $server_info['username'],
-                   $server_info['password'],
-                   $server_info['database'],
-                   $server_info['port']);
+$conn = new mysqli( $server_info['servername'],
+                    $server_info['username'],
+                    $server_info['password'],
+                    $server_info['database'],
+                    $server_info['port']);
 
 if ($conn->connect_error) {
     die("Connection failed: ".$conn->connect_error);
